@@ -22,19 +22,23 @@ if len(nox_list)==1:
     time.sleep(.01)
     win32gui.ShowWindow(nox_list[0][0],win32con.SW_MAXIMIZE)
 
-time.sleep(3)
-pyautogui.leftClick(100,100)
-time.sleep(2)
 
-#found_picture=pyautogui.locateOnScreen('C:/Users/john/Downloads/crstuff/cardrequest.PNG')
+ipath='c:/Users/john/Downloads/crstuff'
 
-bfp=pyautogui.locateOnScreen('C:/Users/john/Downloads/crstuff/bf.PNG')
+swordp=pyautogui.locateOnScreen(ipath+'/sword.PNG')
+
+pyautogui.click(swordp.left+40, swordp.top+10, 1, 1, button='left')
+
+
+#found_picture=pyautogui.locateOnScreen(ipath+'/cardrequest.PNG')
+
+bfp=pyautogui.locateOnScreen(ipath+'/bf.PNG')
 
 #pyautogui.click(found_picture.left+40, found_picture.top+10, 1, 1, button='left')
 
 pyautogui.click(bfp.left+40, bfp.top+10, 1, 1, button='left')
 
-battlepic=pyautogui.locateOnScreen('C:/Users/john/Downloads/crstuff/battle.PNG')
+battlepic=pyautogui.locateOnScreen(ipath+'/battle.PNG')
 
 pyautogui.click(battlepic.left+40, battlepic.top+10, 1, 1, button='left')
 
